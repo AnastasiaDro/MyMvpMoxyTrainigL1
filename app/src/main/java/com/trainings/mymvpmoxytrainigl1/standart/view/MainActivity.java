@@ -14,7 +14,7 @@ import com.trainings.mymvpmoxytrainigl1.standart.presenter.Presenter;
 
 public class MainActivity extends AppCompatActivity implements MainView{
 
-    private static final String TAG = "MoxyActivity";
+    private static final String TAG = "MainActivity";
 
     private EditText editText;
     private Button sendTextBtn;
