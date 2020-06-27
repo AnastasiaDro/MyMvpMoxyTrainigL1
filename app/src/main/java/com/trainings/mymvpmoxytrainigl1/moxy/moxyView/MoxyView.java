@@ -1,7 +1,16 @@
 package com.trainings.mymvpmoxytrainigl1.moxy.moxyView;
 
-public interface MoxyView {
+import moxy.MvpView;
+import moxy.viewstate.strategy.AddToEndStrategy;
+import moxy.viewstate.strategy.StateStrategyType;
+
+public interface MoxyView extends MvpView {
+
+
+
+    @StateStrategyType(value = AddToEndStrategy.class)
     void setTextToTextView(String madeString);
     void clearEditText();
-    String getEnteredString();
+    void saveEnteredText();
+
 }

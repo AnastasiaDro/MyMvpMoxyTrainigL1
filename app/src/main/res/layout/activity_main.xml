@@ -12,7 +12,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
-        android:hint="Введите текст"
+        android:hint="@string/display_text"
         android:inputType="textPersonName" />
 
     <Button
@@ -23,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:onClick="onSendBtnClick"
-        android:text="Button" />
+        android:text="@string/display_text" />
 
     <TextView
         android:id="@+id/textView"

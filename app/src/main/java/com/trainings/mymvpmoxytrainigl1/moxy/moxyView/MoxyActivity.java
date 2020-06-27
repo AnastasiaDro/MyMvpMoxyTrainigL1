@@ -11,16 +11,25 @@ import android.widget.TextView;
 
 import com.trainings.mymvpmoxytrainigl1.R;
 import com.trainings.mymvpmoxytrainigl1.moxy.moxyPresenter.MoxyPresenter;
-import com.trainings.mymvpmoxytrainigl1.standart.presenter.Presenter;
 
-public class MoxyActivity extends AppCompatActivity implements MoxyView {
+import moxy.MvpAppCompatActivity;
+import moxy.presenter.InjectPresenter;
+import moxy.presenter.ProvidePresenter;
+
+public class MoxyActivity extends MvpAppCompatActivity implements MoxyView {
 
     private static final String TAG = "MainActivity";
 
     private EditText editText;
     private Button sendTextBtn;
     private TextView textView;
-    private MoxyPresenter moxyPresenter;
+
+    @InjectPresenter
+    MoxyPresenter moxyPresenter;
+
+    //А для чего же оно всё-таки нужно?
+//    @ProvidePresenter
+//    private MoxyPresenter providePresenter(){return new MoxyPresenter(this);}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +37,6 @@ public class MoxyActivity extends AppCompatActivity implements MoxyView {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate");
         init();
-
-        moxyPresenter = new MoxyPresenter(this);
     }
 
     private void init(){
@@ -44,6 +51,11 @@ public class MoxyActivity extends AppCompatActivity implements MoxyView {
 
 
     @Override
+    public void saveEnteredText() {
+        moxyPresenter.saveEnteredText(editText.getText().toString());
+    }
+
+    @Override
     public void setTextToTextView(String madeString) {
         textView.setText(madeString);
     }
@@ -53,8 +65,8 @@ public class MoxyActivity extends AppCompatActivity implements MoxyView {
         editText.setText("");
     }
 
-    @Override
-    public String getEnteredString() {
-        return editText.getText().toString();
-    }
+//    @Override
+//    public String getEnteredString() {
+//        return editText.getText().toString();
+//    }
 }
