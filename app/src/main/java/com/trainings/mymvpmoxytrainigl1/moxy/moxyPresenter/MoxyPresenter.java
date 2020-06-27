@@ -1,11 +1,8 @@
 package com.trainings.mymvpmoxytrainigl1.moxy.moxyPresenter;
 
 import android.util.Log;
-
 import com.trainings.mymvpmoxytrainigl1.moxy.moxyModel.MoxyModel;
 import com.trainings.mymvpmoxytrainigl1.moxy.moxyView.MoxyView;
-import com.trainings.mymvpmoxytrainigl1.standart.model.Model;
-
 import moxy.InjectViewState;
 import moxy.MvpPresenter;
 

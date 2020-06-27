@@ -9,8 +9,6 @@ public class MoxyModel {
         enteredString = "";
     }
 
-
-
     public String getMyString() {
         return myString;
     }
@@ -18,9 +16,7 @@ public class MoxyModel {
         myString = madeString;
     }
 
-
     public String getEnteredString() { return enteredString; }
-
     public void setEnteredString(String enteredString) { this.enteredString = enteredString; }
 
 }

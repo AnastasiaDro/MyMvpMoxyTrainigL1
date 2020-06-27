@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.trainings.mymvpmoxytrainigl1.R;
 import com.trainings.mymvpmoxytrainigl1.standart.presenter.Presenter;
 
-public class MainActivity extends AppCompatActivity implements MainView{
+public class MainActivity extends AppCompatActivity implements MainView {
 
     private static final String TAG = "MainActivity";
 
@@ -27,11 +27,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate");
         init();
-
         presenter = new Presenter(this);
     }
 
-    private void init(){
+    private void init() {
         editText = findViewById(R.id.editText);
         sendTextBtn = findViewById(R.id.sendTextBtn);
         textView = findViewById(R.id.textView);
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements MainView{
     public void onSendBtnClick(View view) {
         presenter.onSendBtnClick();
     }
-
 
     @Override
     public void setTextToTextView(String madeString) {
