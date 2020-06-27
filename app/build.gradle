@@ -30,5 +30,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-
+    implementation 'com.github.moxy-community:moxy:1.0.13'
+    annotationProcessor 'com.github.moxy-community:moxy-compiler:1.0.13'
+    implementation 'com.github.moxy-community:moxy-androidx:1.0.13'
+    implementation 'com.github.moxy-community:moxy-material:1.0.13'
 }

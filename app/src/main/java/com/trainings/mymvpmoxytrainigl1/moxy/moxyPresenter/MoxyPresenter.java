@@ -1,10 +1,8 @@
 package com.trainings.mymvpmoxytrainigl1.moxy.moxyPresenter;
 
 import android.util.Log;
-
 import com.trainings.mymvpmoxytrainigl1.moxy.moxyView.MoxyView;
 import com.trainings.mymvpmoxytrainigl1.standart.model.Model;
-import com.trainings.mymvpmoxytrainigl1.standart.view.MainView;
 
 public class MoxyPresenter {
     private static final String TAG = "MoxyPresenter";
@@ -28,10 +26,10 @@ public class MoxyPresenter {
 
     public void onSendBtnClick() {
         String oldString = model.getString();
-        String enteredString = mainView.getEnteredString();
+        String enteredString = moxyView.getEnteredString();
         String madeString = createNewString(oldString, enteredString);
         model.setString(madeString);
-        mainView.setTextToTextView(madeString);
-        mainView.clearEditText();
+        moxyView.setTextToTextView(madeString);
+        moxyView.clearEditText();
     }
 }
